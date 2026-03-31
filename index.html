@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A1 Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <h2><i class="fas fa-utensils"></i> A1 Restaurant</h2>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#reservations">Reservations</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Authentic Italian Flavors</h1>
+            <p class="hero-desc">Experience the taste of Italy with our handmade pasta, wood-fired pizzas, and finest wines.</p>
+            <div class="hero-buttons">
+                <a href="#reservations" class="btn-primary">Book a Table</a>
+                <a href="#menu" class="btn-secondary">View Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Family-Owned Since 1985</h3>
+                    <p>Bringing generations of Italian culinary tradition to your table. Fresh ingredients, authentic recipes, passionate chefs.</p>
+                    <div class="stats">
+                        <div class="stat"><span>500+</span> Happy Customers Weekly</div>
+                        <div class="stat"><span>50+</span> Authentic Dishes</div>
+                        <div class="stat"><span>4.9</span> Google Rating</div>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&amp;auto=format" alt="Restaurant Interior" class="about-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- MENU -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2 class="section-title">Our Menu</h2>
+            <div class="menu-tabs">
+                <button class="tab-btn active" data-tab="appetizers">Appetizers</button>
+                <button class="tab-btn" data-tab="mains">Main Courses</button>
+                <button class="tab-btn" data-tab="desserts">Desserts</button>
+            </div>
+            <div class="card-grid" id="appetizers">
+                <div class="menu-card" data-modal="bruschetta">
+                    <img src="img1.webp" alt="Bruschetta">
+                    <h3>Classic Bruschetta</h3>
+                    <p>Fresh tomatoes, basil, garlic on grilled bread</p>
+                    <span class="price">$9.99</span>
+                </div>
+                <div class="menu-card" data-modal="caprese">
+                    <img src="image2.jpg" alt="Caprese Salad">
+                    <h3>Caprese Salad</h3>
+                    <p>Mozzarella, tomatoes, balsamic glaze</p>
+                    <span class="price">$12.99</span>
+                </div>
+            </div>
+            <!-- Other tabs content will be handled in JS -->
+        </div>
+    </section>
+
+    <!-- RESERVATIONS -->
+    <section id="reservations" class="reservations">
+        <div class="container">
+            <h2 class="section-title">Book Your Table</h2>
+            <form class="reservation-form" id="reservationForm">
+                <div class="form-group">
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="date" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="time" required>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="">Guests</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Special Requests" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn-primary full-width">Confirm Reservation</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            <div class="gallery-carousel">
+                <div class="carousel-inner">
+                    <img src="img5.webp" alt="Pizza" class="carousel-img active">
+                    <img src="image2.jpg" alt="Pasta" class="carousel-img">
+                    <img src="image3.jpg" alt="Dessert" class="carousel-img">
+                    <img src="img6.jpg" alt="Our Restaurant" class="carousel-img">
+                </div>
+                <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+                <div class="carousel-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot active"data-slide="1"></span>
+                    <span class="dot active" data-slide="2"></span>
+                    <span class="dot active" data-slide="3"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>Pune, Maharashtra<br>India</div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>+91 214364865</div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>A1@gmail.com</div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.0!2d-73.987!3d40.748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ0JzQ3LjIiTiA3M8KwNTknMTYuMyJX!5e0!3m2!1sen!2sus!4v1630000000000" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENU MODAL -->
+    <div id="menuModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalBody">
+                <!-- Dynamic content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- RESERVATION CONFIRMATION MODAL -->
+    <div id="confirmModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Reservation Confirmed!</h2>
+            <p>Thank you! We'll contact you soon to confirm details.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 A1 Restaurant. All rights reserved. | <a href="#privacy">Privacy Policy</a></p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
